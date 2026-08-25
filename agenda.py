@@ -57,3 +57,19 @@ while True:
         print("Opção inválida.")
 
         pass  # Implementar a função de remover contato
+
+
+#vou deixar o codigo pronto e quando fizer a parte dois eu conserto a identação
+#buscar contatos
+def buscar_contato():
+    termo = input("Digite o nome (ou parte dele) para buscar: ")
+    encontrou = False
+
+    for contato in contatos:
+        if termo.lower() in contato["nome"].lower():
+            print(f"{contato['nome']} - {contato['telefone']} - {contato['email']}")
+            encontrou = True
+
+    if not encontrou:
+        print("Nenhum contato encontrado.")
+
