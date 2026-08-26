@@ -1,12 +1,12 @@
 name: Verifica o código
 
-on: [push, pulll_request]
+on: [push, pull_request]
 
 jobs:
    verificar:
       runs-on: ubuntu-latest
       steps:
-        - name: Baicar o código 
+        - name: Baixar o código 
           uses: actions/checkout@v4
         - name: Configurar Python
           uses: actions/setup-python@v5
